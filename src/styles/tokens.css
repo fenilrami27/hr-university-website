@@ -1,0 +1,87 @@
+:root {
+  /* HRU Brand Identity Tokens (Dark Mode by Default) */
+  --hru-indigo: #5B5BF0;
+  --hru-indigo-hover: #7478FF;
+  --hru-indigo-deep: #4338CA;
+  --hru-indigo-glow: rgba(91, 91, 240, 0.35);
+
+  --hru-midnight: #0A0B1E;
+  --hru-surface-1: #12142B;
+  --hru-surface-2: #1B1E3D;
+  --hru-border: rgba(255, 255, 255, 0.08);
+
+  --hru-gold: #FFC53D;
+  --hru-gold-hover: #FFD666;
+  --hru-gold-deep: #E5A100;
+  --hru-gold-glow: rgba(255, 197, 61, 0.35);
+  --hru-text-on-gold: #0A0B1E;
+
+  /* Aurora Gradient (Cool: Indigo #5B5BF0 to Sky #22D3EE - No purple/magenta) */
+  --hru-aurora: linear-gradient(135deg, #5B5BF0 0%, #38BDF8 60%, #22D3EE 100%);
+  --hru-aurora-glow: linear-gradient(135deg, rgba(91, 91, 240, 0.28) 0%, rgba(34, 211, 238, 0.22) 100%);
+
+  /* Sunrise Gradient (Warm: Sun Gold #FFC53D to Coral #FF7A59) */
+  --hru-sunrise: linear-gradient(135deg, #FFC53D 0%, #FF9944 50%, #FF7A59 100%);
+  --hru-sunrise-glow: linear-gradient(135deg, rgba(255, 197, 61, 0.3) 0%, rgba(255, 122, 89, 0.25) 100%);
+
+  --hru-text-main: #F4F5FB;
+  --hru-text-muted: #A4A8C4;
+  --hru-text-subtle: #6D7296;
+
+  /* Department Tints (Small glows and chips only) */
+  --dept-ai: #7C7FFF;
+  --dept-pharmacy: #2DD4BF;
+  --dept-sports: #FF7A59;
+  --dept-design: #F472B6;
+  --dept-business: #FFC53D;
+  --dept-media: #A78BFA;
+  --dept-biotech: #4ADE80;
+  --dept-architecture: #38BDF8;
+
+  /* Semantic */
+  --semantic-success: #2DD4BF;
+  --semantic-error: #F43F5E;
+  --semantic-warning: #FFC53D;
+
+  /* Dynamic contextual aliases */
+  --bg-app: var(--hru-midnight);
+  --bg-surface-1: var(--hru-surface-1);
+  --bg-surface-2: var(--hru-surface-2);
+  --border-app: var(--hru-border);
+  --text-app-main: var(--hru-text-main);
+  --text-app-muted: var(--hru-text-muted);
+
+  /* Pop Palette Tokens (For lively sections) */
+  --pop-coral: #FF7A59;
+  --pop-gold: #FFC53D;
+  --pop-mint: #2DD4BF;
+  --pop-sky: #22D3EE;
+  --pop-pink: #F472B6;
+  --pop-lime: #C6FF3D;
+  --pop-violet: #A78BFA;
+  --pop-indigo: #5B5BF0;
+  --pop-dark-ink: #0A0B1E;
+
+  /* Gradient Pairs */
+  --gradient-sunrise: linear-gradient(135deg, #FFC53D 0%, #FF7A59 100%);
+  --gradient-lagoon: linear-gradient(135deg, #22D3EE 0%, #2DD4BF 100%);
+  --gradient-bubblegum: linear-gradient(135deg, #F472B6 0%, #FF7A59 100%);
+  --gradient-electric: linear-gradient(135deg, #5B5BF0 0%, #22D3EE 100%);
+  --gradient-lime-pop: linear-gradient(135deg, #C6FF3D 0%, #2DD4BF 100%);
+
+  /* Motion tokens */
+  --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Light Mode Overrides */
+html.light, .light {
+  --bg-app: #F7F7FB;
+  --bg-surface-1: #FFFFFF;
+  --bg-surface-2: #F0F2FA;
+  --border-app: rgba(10, 11, 30, 0.08);
+  --text-app-main: #0A0B1E;
+  --text-app-muted: #5B607A;
+  --text-app-subtle: #898FA8;
+  --hru-border: rgba(10, 11, 30, 0.08);
+}
