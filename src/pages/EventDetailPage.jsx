@@ -1,31 +1,29 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   ArrowLeft,
-  Calendar,
   MapPin,
   Sparkles,
   Trophy,
-  Users,
   CheckCircle2,
   ChevronDown,
   Clock,
   ArrowUpRight,
   ShieldAlert,
-  Flame,
   Camera,
-  X
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import Button from '../components/ui/Button';
 import Lightbox from '../components/ui/Lightbox';
 import { festivalsData } from '../data/events';
 
+const createPassCode = () => `HRU-${Math.floor(100000 + Math.random() * 900000)}`;
+
 export function EventDetailPage() {
   const { slug } = useParams();
   const [openRuleIndex, setOpenRuleIndex] = useState(0);
   const [registered, setRegistered] = useState(false);
+  const [passCode, setPassCode] = useState(null);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const [regForm, setRegForm] = useState({ name: '', roll: '', teamSize: 'Solo' });
@@ -38,6 +36,7 @@ export function EventDetailPage() {
 
   const handleRegisterSubmit = (e) => {
     e.preventDefault();
+    setPassCode(createPassCode());
     try {
       confetti({
         particleCount: 35,
@@ -309,7 +308,7 @@ export function EventDetailPage() {
                   Your student entry pass has been emailed to you. Please bring your college ID card.
                 </p>
                 <div className="p-2 rounded-xl bg-white/5 border border-white/10 text-xs font-mono text-[#FFC53D]">
-                  PASS: HRU-{Math.floor(100000 + Math.random() * 900000)}
+                  PASS: {passCode || 'HRU-849201'}
                 </div>
               </div>
             ) : (

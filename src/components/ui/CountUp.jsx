@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+import React, { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import { usePrefersReducedMotion } from '../../hooks/usePrefersReducedMotion';
 
 // Exponential ease out for high-impact cinematic deceleration
@@ -31,19 +31,14 @@ export function CountUp({
     onCompleteRef.current = onComplete;
   }, [onComplete]);
 
-  const formatter = useRef(
-    new Intl.NumberFormat('en-IN', {
-      minimumFractionDigits: decimals,
-      maximumFractionDigits: decimals,
-    })
+  const formatter = useMemo(
+    () =>
+      new Intl.NumberFormat('en-IN', {
+        minimumFractionDigits: decimals,
+        maximumFractionDigits: decimals,
+      }),
+    [decimals]
   );
-
-  useEffect(() => {
-    formatter.current = new Intl.NumberFormat('en-IN', {
-      minimumFractionDigits: decimals,
-      maximumFractionDigits: decimals,
-    });
-  }, [decimals]);
 
   const startAnimation = useCallback(() => {
     if (prefersReducedMotion) {
@@ -123,11 +118,11 @@ export function CountUp({
   };
 
   const formattedDisplay = formatEnIn
-    ? formatter.current.format(currentValue)
+    ? formatter.format(currentValue)
     : currentValue.toLocaleString();
 
   const finalFormatted = formatEnIn
-    ? formatter.current.format(to)
+    ? formatter.format(to)
     : to.toLocaleString();
 
   return (

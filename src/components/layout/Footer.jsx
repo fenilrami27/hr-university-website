@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, CheckCircle2, Sparkles, Send, ArrowUp, ShieldCheck, Heart } from 'lucide-react';
+import { ArrowUpRight, CheckCircle2, Sparkles, Send, ArrowUp, ShieldCheck } from 'lucide-react';
 import Button from '../ui/Button';
+
+const CURRENT_YEAR = new Date().getFullYear();
 
 export function Footer() {
   const [email, setEmail] = useState('');
@@ -253,7 +255,7 @@ export function Footer() {
         {/* Bottom Bar: Copyright, System Cluster & Back To Top */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-[#A4A8C4] gap-4">
           <div className="flex items-center gap-2">
-            <span>© {new Date().getFullYear()} HR UNIVERSITY. ALL RIGHTS RESERVED.</span>
+            <span>© {CURRENT_YEAR} HR UNIVERSITY. ALL RIGHTS RESERVED.</span>
           </div>
 
           <div className="flex flex-wrap items-center gap-6">

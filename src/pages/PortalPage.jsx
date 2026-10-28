@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Shield, Key, Fingerprint, Sparkles, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Shield, Fingerprint, CheckCircle2 } from 'lucide-react';
 import Button from '../components/ui/Button';
 
 export function PortalPage() {

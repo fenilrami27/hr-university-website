@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Calculator, Award, Sparkles, DollarSign, CheckCircle2, ShieldCheck, ArrowUpRight } from 'lucide-react';
-import SectionHeading from '../components/ui/SectionHeading';
+import { Calculator, Sparkles } from 'lucide-react';
 import CountUp from '../components/ui/CountUp';
 import Button from '../components/ui/Button';
 

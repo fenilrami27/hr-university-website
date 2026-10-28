@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import CountUp from '../ui/CountUp';
 import { placementJourneySteps } from '../../data/placements';
-import { Compass, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Compass, CheckCircle2 } from 'lucide-react';
 
 export function PlacementJourney() {
   return (

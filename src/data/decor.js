@@ -134,6 +134,27 @@ export const decorData = {
     },
   },
 
+  research: {
+    left: {
+      type: 'rail',
+      index: '05',
+      sectionName: 'Research',
+      text: 'FRONTIER DISCOVERY • NEURIPS & NATURE • OPEN PLEDGE •',
+      dots: 6,
+      activeDot: 4,
+    },
+    right: {
+      type: 'photo',
+      photo: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=400&q=80',
+      caption: '512-H100 Lab Bay',
+      mask: 'arch',
+      rotation: 5,
+      speed: 0.08,
+      glow: 'rgba(139, 92, 246, 0.3)',
+      blobColor: '#8B5CF6',
+    },
+  },
+
   events: {
     left: {
       type: 'rail',

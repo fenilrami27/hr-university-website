@@ -6,12 +6,14 @@ export function CustomCursor() {
   const [mousePosition, setMousePosition] = useState({ x: -100, y: -100 });
   const [isHovered, setIsHovered] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const [isTouchDevice, setIsTouchDevice] = useState(true);
+  const [isTouchDevice] = useState(() => {
+    if (typeof window === 'undefined') return true;
+    return !window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  });
   const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
     const hasPointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-    setIsTouchDevice(!hasPointer);
 
     if (!hasPointer || prefersReducedMotion) return;
 

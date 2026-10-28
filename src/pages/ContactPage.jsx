@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import confetti from 'canvas-confetti';
-import { MapPin, Mail, Phone, MessageSquare, Sparkles, CheckCircle2, Clock } from 'lucide-react';
-import SectionHeading from '../components/ui/SectionHeading';
+import { Mail, MessageSquare, Sparkles, CheckCircle2, Clock } from 'lucide-react';
 import Button from '../components/ui/Button';
 
 export function ContactPage() {
@@ -31,7 +30,9 @@ export function ContactPage() {
           origin: { y: 0.6 },
           colors: ['#D4FF00', '#8B5CF6', '#FF3366'],
         });
-      } catch (e) {}
+      } catch {
+        // Confetti optional
+      }
     }, 500);
   };
 

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import PlacementHeroRing from './PlacementHeroRing';
 import CountUp from '../ui/CountUp';
 import {
@@ -10,7 +9,6 @@ import {
   Award,
   Globe2,
   CheckCircle2,
-  Sparkles,
 } from 'lucide-react';
 import {
   heroPlacement,

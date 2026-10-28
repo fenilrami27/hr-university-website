@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import CountUp from '../ui/CountUp';
 import { sectorDonutData } from '../../data/placements';
-import { PieChart, Briefcase, Sparkles, Building2 } from 'lucide-react';
+import { PieChart, Building2 } from 'lucide-react';
 import { usePrefersReducedMotion } from '../../hooks/usePrefersReducedMotion';
 
 export function SectorDonutChart() {
@@ -16,10 +16,10 @@ export function SectorDonutChart() {
   const circumference = 2 * Math.PI * radius; // ~427.256
 
   // Pre-calculate cumulative offsets for 100% circumference
-  let cumulativePercent = 0;
   const slices = sectorDonutData.map((d, index) => {
-    const startPercent = cumulativePercent;
-    cumulativePercent += d.percentage;
+    const startPercent = sectorDonutData
+      .slice(0, index)
+      .reduce((sum, item) => sum + item.percentage, 0);
     const strokeDash = (d.percentage / 100) * circumference;
     const strokeOffset = -((startPercent / 100) * circumference);
     return {

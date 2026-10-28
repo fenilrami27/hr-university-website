@@ -1,6 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowLeft, Compass, Sparkles } from 'lucide-react';
+import { ArrowLeft, Compass } from 'lucide-react';
 import Button from '../components/ui/Button';
 
 export function NotFoundPage() {

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { MapPin, Sparkles, Wifi, Shield, Coffee, Zap } from 'lucide-react';
 import SectionHeading from '../components/ui/SectionHeading';
 import Button from '../components/ui/Button';
@@ -119,7 +118,7 @@ export function CampusPage() {
 
       {/* Full Gallery Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {campusLifeGallery.map((card, idx) => (
+        {campusLifeGallery.map((card) => (
           <div
             key={card.id}
             className="rounded-3xl overflow-hidden bg-white/70 dark:bg-[#10121A]/70 border border-black/10 dark:border-white/10 group shadow-lg"

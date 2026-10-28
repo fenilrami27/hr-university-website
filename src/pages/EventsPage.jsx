@@ -6,18 +6,13 @@ import {
   Search,
   Sparkles,
   Trophy,
-  Users,
-  MapPin,
   ArrowUpRight,
-  Filter,
   CheckCircle2,
   X,
-  Flame,
   List,
   Grid
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
-import SectionHeading from '../components/ui/SectionHeading';
 import Button from '../components/ui/Button';
 import { festivalsData, eventCategories } from '../data/events';
 
@@ -69,7 +64,11 @@ export function EventsPage() {
         disableForReducedMotion: true,
       });
     } catch {}
-    setRegistrationModal((prev) => ({ ...prev, success: true }));
+    setRegistrationModal((prev) => ({
+      ...prev,
+      success: true,
+      ticketId: Math.floor(100000 + Math.random() * 900000),
+    }));
   };
 
   return (
@@ -358,7 +357,7 @@ export function EventsPage() {
                     You have reserved a spot for <span className="text-white font-bold">{registrationModal.event.title}</span>. Your event credential pass has been dispatched.
                   </p>
                   <div className="p-3 rounded-2xl bg-white/5 border border-white/10 text-xs font-mono text-[#FFC53D] inline-block">
-                    TICKET PASS: HRU-{Math.floor(100000 + Math.random() * 900000)}
+                    TICKET PASS: HRU-{registrationModal.ticketId || '938472'}
                   </div>
                   <div className="pt-4">
                     <Button

@@ -4,10 +4,6 @@ import confetti from 'canvas-confetti';
 import {
   Building2,
   Download,
-  Mail,
-  User,
-  Briefcase,
-  FileText,
   X,
   CheckCircle2,
   Sparkles,

@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Quote, Sparkles, CheckCircle2 } from 'lucide-react';
-import SectionHeading from '../components/ui/SectionHeading';
+import { Quote, Sparkles } from 'lucide-react';
 import mediaRegistry from '../data/media';
 
 export function ChancellorSection() {

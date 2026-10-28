@@ -1,15 +1,27 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight, ZoomIn, ZoomOut } from 'lucide-react';
-import { modalBackdrop, modalPanel } from '../../lib/motion';
+import { modalBackdrop } from '../../lib/motion';
 
 export function Lightbox({ isOpen, onClose, images = [], initialIndex = 0 }) {
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
+  const [prevInitial, setPrevInitial] = useState(initialIndex);
   const [isZoomed, setIsZoomed] = useState(false);
 
-  useEffect(() => {
+  if (prevInitial !== initialIndex) {
+    setPrevInitial(initialIndex);
     setCurrentIndex(initialIndex);
-  }, [initialIndex]);
+  }
+
+  const handleNext = useCallback(() => {
+    setIsZoomed(false);
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  }, [images.length]);
+
+  const handlePrev = useCallback(() => {
+    setIsZoomed(false);
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  }, [images.length]);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -20,17 +32,7 @@ export function Lightbox({ isOpen, onClose, images = [], initialIndex = 0 }) {
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, currentIndex, images.length]);
-
-  const handleNext = () => {
-    setIsZoomed(false);
-    setCurrentIndex((prev) => (prev + 1) % images.length);
-  };
-
-  const handlePrev = () => {
-    setIsZoomed(false);
-    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
+  }, [isOpen, handleNext, handlePrev, onClose]);
 
   if (!isOpen || images.length === 0) return null;
 

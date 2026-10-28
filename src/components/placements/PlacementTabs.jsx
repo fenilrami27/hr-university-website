@@ -6,7 +6,7 @@ import {
   departmentPlacements,
   yearlyBatchTrends,
 } from '../../data/placements';
-import { TrendingUp, Layers, Calendar, Award } from 'lucide-react';
+import { Layers, Calendar, Award } from 'lucide-react';
 import { usePrefersReducedMotion } from '../../hooks/usePrefersReducedMotion';
 
 export function PlacementTabs() {

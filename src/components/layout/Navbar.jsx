@@ -9,7 +9,6 @@ import {
   Search,
   ChevronDown,
   ArrowUpRight,
-  Sparkles,
   Cpu,
   Layers,
   HeartPulse,
@@ -52,10 +51,12 @@ export function Navbar({ isDark, toggleTheme, onOpenSearch }) {
   }, []);
 
   // Close menus on route change
-  useEffect(() => {
-    setMobileMenuOpen(false);
-    setAcademicsOpen(false);
-  }, [location.pathname]);
+  const [prevPath, setPrevPath] = useState(location.pathname);
+  if (prevPath !== location.pathname) {
+    setPrevPath(location.pathname);
+    if (mobileMenuOpen) setMobileMenuOpen(false);
+    if (academicsOpen) setAcademicsOpen(false);
+  }
 
   const departmentsList = [
     { name: 'AI & Data Science', slug: 'ai-data-science', tint: '#7C7FFF', icon: Cpu, badge: '512-H100' },

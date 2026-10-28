@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import confetti from 'canvas-confetti';
 import CountUp from '../ui/CountUp';
-import { Award, Sparkles, ArrowUpRight, TrendingUp } from 'lucide-react';
+import { Award, Sparkles, TrendingUp } from 'lucide-react';
 import { usePrefersReducedMotion } from '../../hooks/usePrefersReducedMotion';
 
 export function PlacementHeroRing({
@@ -15,10 +15,10 @@ export function PlacementHeroRing({
   className = '',
 }) {
   const [replayKey, setReplayKey] = useState(0);
-  const [ringProgress, setRingProgress] = useState(0);
+  const prefersReducedMotion = usePrefersReducedMotion();
+  const [ringProgress, setRingProgress] = useState(() => prefersReducedMotion ? value : 0);
   const ringRef = useRef(null);
   const cardRef = useRef(null);
-  const prefersReducedMotion = usePrefersReducedMotion();
   const hasFiredConfetti = useRef(false);
 
   const radius = 62;
@@ -51,12 +51,8 @@ export function PlacementHeroRing({
 
   // Animate ring in sync with counter
   useEffect(() => {
-    if (prefersReducedMotion) {
-      setRingProgress(value);
-      return;
-    }
+    if (prefersReducedMotion) return;
 
-    setRingProgress(0);
     const duration = 2000;
     const startTime = performance.now();
 

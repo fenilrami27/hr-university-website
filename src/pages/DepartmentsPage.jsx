@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Sparkles, Building2 } from 'lucide-react';
-import SectionHeading from '../components/ui/SectionHeading';
+import { ArrowUpRight, Sparkles } from 'lucide-react';
 import mediaRegistry from '../data/media';
 
 export function DepartmentsPage() {

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Globe2, MapPin, Sparkles, Building, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import SectionHeading from '../components/ui/SectionHeading';
 import Card from '../components/ui/Card';
 

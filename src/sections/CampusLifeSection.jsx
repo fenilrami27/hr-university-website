@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { motion } from 'framer-motion';
-import { ArrowLeft, ArrowRight, Sparkles, MapPin, Eye } from 'lucide-react';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 import SectionHeading from '../components/ui/SectionHeading';
 import MediaCard from '../components/ui/MediaCard';
 import Lightbox from '../components/ui/Lightbox';

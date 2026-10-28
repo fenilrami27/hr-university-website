@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, CheckCircle2, PhoneCall, Sparkles } from 'lucide-react';
 import { POPUP_DELAY_MS, POPUP_VISIBLE_MS } from '../../config/enquiry';
-import { usePrefersReducedMotion } from '../../hooks/usePrefersReducedMotion';
 
 export function TimedEnquiryPopup({ canStart = false }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,12 +19,46 @@ export function TimedEnquiryPopup({ canStart = false }) {
   });
 
   const location = useLocation();
-  const prefersReducedMotion = usePrefersReducedMotion();
 
   const accumulatedTimeRef = useRef(0);
   const drainTimerRef = useRef(null);
   const drainStartRef = useRef(null);
   const remainingDrainRef = useRef(POPUP_VISIBLE_MS);
+
+  const handleClose = useCallback(() => {
+    setIsOpen(false);
+    cancelAnimationFrame(drainTimerRef.current);
+  }, []);
+
+  // Start 5-second drain countdown
+  const startDrain = useCallback((duration) => {
+    drainStartRef.current = performance.now();
+    remainingDrainRef.current = duration;
+
+    const step = (now) => {
+      if (isPaused || hasInteracted) return;
+
+      const elapsed = now - drainStartRef.current;
+      const remaining = Math.max(0, remainingDrainRef.current - elapsed);
+      const pct = (remaining / POPUP_VISIBLE_MS) * 100;
+
+      setDrainProgress(pct);
+
+      if (remaining > 0) {
+        drainTimerRef.current = requestAnimationFrame(step);
+      } else {
+        handleClose();
+      }
+    };
+
+    drainTimerRef.current = requestAnimationFrame(step);
+  }, [hasInteracted, isPaused, handleClose]);
+
+  const triggerOpen = useCallback(() => {
+    sessionStorage.setItem('hru_enquiry_shown', 'true');
+    setIsOpen(true);
+    startDrain(POPUP_VISIBLE_MS);
+  }, [startDrain]);
 
   // Check if popup should trigger after POPUP_DELAY_MS of active tab visibility
   useEffect(() => {
@@ -56,37 +89,7 @@ export function TimedEnquiryPopup({ canStart = false }) {
 
     interval = setInterval(handleVisibilityTick, tickTime);
     return () => clearInterval(interval);
-  }, [canStart, location.pathname]);
-
-  const triggerOpen = () => {
-    sessionStorage.setItem('hru_enquiry_shown', 'true');
-    setIsOpen(true);
-    startDrain(POPUP_VISIBLE_MS);
-  };
-
-  // Start 5-second drain countdown
-  const startDrain = (duration) => {
-    drainStartRef.current = performance.now();
-    remainingDrainRef.current = duration;
-
-    const step = (now) => {
-      if (isPaused || hasInteracted) return;
-
-      const elapsed = now - drainStartRef.current;
-      const remaining = Math.max(0, remainingDrainRef.current - elapsed);
-      const pct = (remaining / POPUP_VISIBLE_MS) * 100;
-
-      setDrainProgress(pct);
-
-      if (remaining > 0) {
-        drainTimerRef.current = requestAnimationFrame(step);
-      } else {
-        handleClose();
-      }
-    };
-
-    drainTimerRef.current = requestAnimationFrame(step);
-  };
+  }, [canStart, location.pathname, triggerOpen]);
 
   const handlePause = () => {
     setIsPaused(true);
@@ -99,11 +102,6 @@ export function TimedEnquiryPopup({ canStart = false }) {
     startDrain((drainProgress / 100) * POPUP_VISIBLE_MS);
   };
 
-  const handleClose = () => {
-    setIsOpen(false);
-    cancelAnimationFrame(drainTimerRef.current);
-  };
-
   // Listen for Escape key
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -113,7 +111,7 @@ export function TimedEnquiryPopup({ canStart = false }) {
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen]);
+  }, [isOpen, handleClose]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

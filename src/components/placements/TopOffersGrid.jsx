@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { topOffersCards } from '../../data/placements';
-import { Award, Building2, MapPin, Sparkles, ArrowUpRight } from 'lucide-react';
+import { Award, Building2, MapPin } from 'lucide-react';
 
 export function TopOffersGrid() {
   return (

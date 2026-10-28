@@ -1,10 +1,8 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { TrendingUp, Briefcase, DollarSign, Award, ArrowUpRight, Sparkles, ShieldCheck } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import SectionHeading from '../components/ui/SectionHeading';
 import PlacementsSection from '../sections/PlacementsSection';
 import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
 
 export function PlacementsPage() {
   const careerHighlights = [

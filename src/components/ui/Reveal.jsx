@@ -8,7 +8,6 @@ export function Reveal({
   duration = 0.6,
   y = 30,
   className = '',
-  cascade = false,
 }) {
   const prefersReducedMotion = usePrefersReducedMotion();
 

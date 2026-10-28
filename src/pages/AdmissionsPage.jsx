@@ -9,17 +9,12 @@ import {
   UploadCloud,
   FileCheck,
   Clock,
-  DollarSign,
   PhoneCall,
   Download,
-  AlertCircle,
-  HelpCircle,
   ShieldCheck,
   Check,
 } from 'lucide-react';
 import Button from '../components/ui/Button';
-import SectionHeading from '../components/ui/SectionHeading';
-import CountUp from '../components/ui/CountUp';
 import mediaRegistry from '../data/media';
 
 export function AdmissionsPage() {
@@ -28,7 +23,6 @@ export function AdmissionsPage() {
   const [loading, setLoading] = useState(false);
   const [draftToast, setDraftToast] = useState(false);
   const [brochureModal, setBrochureModal] = useState(false);
-  const [uploadProgress, setUploadProgress] = useState(100);
 
   const [formData, setFormData] = useState({
     // Step 1: Personal
@@ -111,7 +105,7 @@ export function AdmissionsPage() {
           origin: { y: 0.55 },
           colors: ['#FFC53D', '#5B5BF0', '#8B5CF6', '#22D3EE'],
         });
-      } catch (err) {}
+      } catch {}
     }, 700);
   };
 

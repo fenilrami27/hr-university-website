@@ -1,6 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Sparkles, Check, X, Shield, Users, Target, Rocket } from 'lucide-react';
+import { Sparkles, Check, X } from 'lucide-react';
 import SectionHeading from '../components/ui/SectionHeading';
 import Button from '../components/ui/Button';
 

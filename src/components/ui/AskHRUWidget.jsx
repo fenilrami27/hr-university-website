@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageSquare, X, Send, Sparkles, Bot, User, ArrowUpRight } from 'lucide-react';
+import { MessageSquare, X, Send, Bot } from 'lucide-react';
 import { modalPanel } from '../../lib/motion';
 
 export function AskHRUWidget() {

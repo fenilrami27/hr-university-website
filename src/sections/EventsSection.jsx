@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Calendar,
-  MapPin,
   Sparkles,
   CheckCircle2,
   Bell,
@@ -13,7 +12,6 @@ import {
   ChevronLeft,
   X,
   Trophy,
-  Users
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import SectionHeading from '../components/ui/SectionHeading';
@@ -58,7 +56,11 @@ export function EventsSection() {
       });
     } catch {}
 
-    setRegistrationModal((prev) => ({ ...prev, success: true }));
+    setRegistrationModal((prev) => ({
+      ...prev,
+      success: true,
+      passId: Math.floor(100000 + Math.random() * 900000),
+    }));
   };
 
   const scrollTimeline = (dir) => {
@@ -372,7 +374,7 @@ export function EventsSection() {
                     You are registered for <span className="text-white font-bold">{registrationModal.event.title}</span>. Your student digital entry badge has been generated.
                   </p>
                   <div className="p-3 rounded-2xl bg-white/5 border border-white/10 text-xs font-mono text-[#FFC53D] inline-block">
-                    PASS ID: HRU-FEST-{Math.floor(100000 + Math.random() * 900000)}
+                    PASS ID: HRU-FEST-{registrationModal.passId || '849201'}
                   </div>
                   <div className="pt-4">
                     <Button

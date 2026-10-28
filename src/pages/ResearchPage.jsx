@@ -1,6 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Cpu, Award, FileText, FlaskConical, ArrowUpRight, Sparkles } from 'lucide-react';
+import { Sparkles, ArrowUpRight, Cpu, Layers, Dna, ShieldCheck } from 'lucide-react';
 import SectionHeading from '../components/ui/SectionHeading';
 import ResearchSection from '../sections/ResearchSection';
 import Card from '../components/ui/Card';
@@ -11,26 +10,38 @@ export function ResearchPage() {
     {
       name: 'Autonomous Agentic Systems Lab (AASL)',
       director: 'Dr. Valerius Thorne',
-      focus: 'Multi-agent coordination, tool-use RL, and self-improving code synthesis.',
+      focus: 'Multi-agent coordination, tool-use RL, and self-improving code synthesis running on 512-H100 clusters.',
       facility: 'H100 Cluster Bay 04',
+      icon: Cpu,
+      tint: '#8B5CF6',
+      badge: '512x H100 Nodes',
     },
     {
       name: 'Volumetric Spatial Interaction Lab',
       director: 'Elena Rostova',
-      focus: 'Real-time eye-tracking foveation, haptic gloves, and spatial UI engines.',
+      focus: 'Real-time eye-tracking foveation, haptic feedback gloves, and low-latency spatial UI rendering engines.',
       facility: 'Volumetric Stage 01',
+      icon: Layers,
+      tint: '#EC4899',
+      badge: 'VisionOS Prototyping',
     },
     {
       name: 'Synthetic Bio-Engineering & Proteomics',
       director: 'Dr. Zuri Okafor',
-      focus: 'Automated microfluidic chips, CRISPR protein folds, and biomimetic composites.',
+      focus: 'Automated microfluidic chips, CRISPR protein folds, and mycelium-based biocompatible tissue scaffolding.',
       facility: 'BSL-2 Cleanroom 03',
+      icon: Dna,
+      tint: '#10B981',
+      badge: 'BSL-2 Cleanroom',
     },
     {
       name: 'Quantum Cryptography & Mechanism Design',
       director: 'Marcus Vance',
-      focus: 'Sub-millisecond ZK-SNARK verifiers and post-quantum network defenses.',
+      focus: 'Sub-millisecond recursive ZK-SNARK verifiers, sovereign decentralized identities, and post-quantum network defense.',
       facility: 'Silicon Quarter Hub',
+      icon: ShieldCheck,
+      tint: '#06B6D4',
+      badge: 'Post-Quantum Protocol',
     },
   ];
 
@@ -56,7 +67,7 @@ export function ResearchPage() {
       <ResearchSection />
 
       {/* Laboratories Catalog */}
-      <div className="mt-16">
+      <div className="mt-20">
         <SectionHeading
           badge="PHYSICAL LAB INFRASTRUCTURE"
           badgeColor="gold"
@@ -66,34 +77,67 @@ export function ResearchPage() {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {labs.map((lab, i) => (
-            <Card key={i} glow="indigo" className="p-8 space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="text-[10px] font-mono uppercase px-2.5 py-0.5 rounded-full bg-hru-indigo/15 text-hru-indigo border border-hru-indigo/30">
-                  {lab.facility}
-                </span>
-                <span className="text-xs font-mono text-hru-gold">ACTIVE FELLOWSHIP</span>
-              </div>
+          {labs.map((lab, i) => {
+            const Icon = lab.icon;
+            return (
+              <Card
+                key={i}
+                glow="indigo"
+                className="p-8 space-y-5 hover:border-white/30 transition-all duration-300"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2.5">
+                    <div
+                      className="w-10 h-10 rounded-xl flex items-center justify-center"
+                      style={{ backgroundColor: `${lab.tint}20`, color: lab.tint }}
+                    >
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <span className="text-[10px] font-mono uppercase px-2.5 py-0.5 rounded-full border border-white/10 bg-white/5 text-white/90">
+                      {lab.facility}
+                    </span>
+                  </div>
+                  <span
+                    className="text-xs font-mono px-2.5 py-0.5 rounded-full border"
+                    style={{
+                      borderColor: `${lab.tint}50`,
+                      backgroundColor: `${lab.tint}15`,
+                      color: lab.tint,
+                    }}
+                  >
+                    {lab.badge}
+                  </span>
+                </div>
 
-              <h3 className="font-heading font-bold text-xl text-app-text">
-                {lab.name}
-              </h3>
+                <h3 className="font-heading font-bold text-xl text-app-text">
+                  {lab.name}
+                </h3>
 
-              <p className="text-xs text-app-muted font-mono">
-                Principal Investigator: {lab.director}
-              </p>
+                <p className="text-xs text-app-muted font-mono flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: lab.tint }} />
+                  <span>Principal Investigator: {lab.director}</span>
+                </p>
 
-              <p className="text-sm text-app-muted leading-relaxed">
-                {lab.focus}
-              </p>
+                <p className="text-sm text-app-muted leading-relaxed">
+                  {lab.focus}
+                </p>
 
-              <div className="pt-4 border-t border-app-border">
-                <Button to="/admissions" variant="outline" size="sm">
-                  Apply for Research Fellowship
-                </Button>
-              </div>
-            </Card>
-          ))}
+                <div className="pt-4 border-t border-app-border flex items-center justify-between">
+                  <Button
+                    to="/admissions"
+                    variant="outline"
+                    size="sm"
+                    icon={<ArrowUpRight className="w-3.5 h-3.5" />}
+                  >
+                    Apply for Lab Fellowship
+                  </Button>
+                  <span className="text-[11px] font-mono text-hru-gold">
+                    ACTIVE 2026/27 COHORT
+                  </span>
+                </div>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </div>

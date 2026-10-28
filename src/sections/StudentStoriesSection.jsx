@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Quote, Sparkles, ChevronLeft, ChevronRight, CheckCircle2, Play } from 'lucide-react';
+import { Quote, ChevronLeft, ChevronRight, CheckCircle2, Play } from 'lucide-react';
 import SectionHeading from '../components/ui/SectionHeading';
 import VideoModal from '../components/ui/VideoModal';
 import { studentStories } from '../data/universityData';
