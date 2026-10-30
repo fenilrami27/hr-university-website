@@ -1,7 +1,8 @@
 {
   "name": "hr-university",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Modern frontend web portal for HR University featuring cinematic hero animations, interactive admissions, campus virtual tour, live counters, and real-time student updates.",
   "type": "module",
   "scripts": {
     "dev": "vite",
