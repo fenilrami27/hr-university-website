@@ -66,12 +66,17 @@ export function EventDetailPage() {
       </Link>
 
       {/* Hero Header Banner */}
-      <div className="relative rounded-3xl overflow-hidden mb-12 border border-white/15 bg-[#0A0B1E] shadow-2xl">
+      <div className="relative rounded-3xl overflow-hidden mb-12 border border-white/15 bg-gradient-to-br from-[#12142B] via-[#1E2248] to-[#0A0B1E] shadow-2xl">
         <div className="relative min-h-[420px] sm:min-h-[500px] flex flex-col justify-end p-6 sm:p-12 lg:p-16">
           <img
             src={event.image}
             alt={event.alt || event.title}
+            loading="lazy"
+            onError={(e) => {
+              e.currentTarget.style.display = 'none';
+            }}
             className="absolute inset-0 w-full h-full object-cover filter brightness-[0.65] saturate-125"
+            style={{ objectPosition: 'center 35%' }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0A0B1E] via-[#0A0B1E]/60 to-transparent pointer-events-none" />
           <div
@@ -223,12 +228,15 @@ export function EventDetailPage() {
                   <div
                     key={idx}
                     onClick={() => handleOpenPhoto(idx)}
-                    className="relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer group border border-white/10"
+                    className="relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer group border border-white/10 bg-gradient-to-br from-[#12142B] via-[#1E2248] to-[#0A0B1E]"
                   >
                     <img
                       src={m.src}
-                      alt={m.caption}
+                      alt={m.caption || event.title}
                       loading="lazy"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                      }}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter brightness-90 group-hover:brightness-100"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">

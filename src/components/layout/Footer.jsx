@@ -152,6 +152,7 @@ export function Footer() {
                 { name: 'Home', path: '/' },
                 { name: 'Departments', path: '/departments' },
                 { name: 'Programs & Degrees', path: '/programs' },
+                { name: 'Student Updates', path: '/student-updates' },
                 { name: 'Events & Festivals', path: '/events' },
                 { name: 'Campus Life', path: '/campus' },
                 { name: 'Research Hub', path: '/research' },
@@ -259,8 +260,11 @@ export function Footer() {
           </div>
 
           <div className="flex flex-wrap items-center gap-6">
-            <Link to="/portal" className="text-[#FFC53D] hover:underline font-semibold">
-              Student / Alumni Portal
+            <Link to="/student-updates" className="text-[#FFC53D] hover:underline font-semibold">
+              Student Updates
+            </Link>
+            <Link to="/portal" className="text-[#A4A8C4] hover:text-white transition-colors">
+              SSO Gateway
             </Link>
             <span className="flex items-center gap-1.5 text-[#2DD4BF]">
               <span className="w-2 h-2 rounded-full bg-[#2DD4BF] animate-pulse" />

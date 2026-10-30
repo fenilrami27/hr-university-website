@@ -1,5 +1,5 @@
 // HR University Centralized Events & Festivals Registry
-// Verified free commercial use photos (Unsplash, Pexels, Pixabay)
+// Verified free commercial use photos (Wikimedia Commons, Unsplash)
 // Preserves respectful festive celebrations and student competitions
 
 export const eventCategories = ['All', 'Festivals', 'Cultural', 'Tech', 'Sports', 'Academic'];
@@ -17,9 +17,9 @@ export const festivalsData = [
     tint: '#FF7A59', // Pop Coral
     gradient: 'from-[#FF7A59] via-[#FFC53D] to-[#F472B6]',
     countdownLabel: 'Starts in approx 3 Weeks',
-    image: 'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/events/navratri-garba-raas.jpg',
     videoUrl: '/videos/hero/hero-1.mp4',
-    alt: 'Joyful Garba and Dandiya dancers in vibrant traditional attire',
+    alt: 'Joyful Garba and Dandiya dancers in vibrant traditional attire under festive lights',
     badge: 'Flagship Celebration',
     summary: 'The pinnacle of HRU festive spirit. 9 nights of electrifying Raas, traditional live folk orchestras, midnight food streets, and prestigious university-wide Garba trophies.',
     description: `HR University celebrates Navratri with deep cultural reverence and boundless youthful ecstasy. The central open-air amphitheater transforms into a sea of kaleidoscopic traditional bandhej, mirror-work chaniya cholis, and swirling kediyus. 
@@ -81,15 +81,15 @@ Under canopy lights and glowing lanterns, students, faculty, and international f
     ],
     momentsGallery: [
       {
-        src: 'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=800&q=80',
+        src: '/images/events/navratri-garba-raas.jpg',
         caption: 'Midnight Dandiya Raas in Central Amphitheater',
       },
       {
-        src: 'https://images.unsplash.com/photo-1533158307587-828f0a76ef46?auto=format&fit=crop&w=800&q=80',
+        src: '/images/events/diwali-deepotsav.jpg',
         caption: 'Traditional floral rangoli and evening diya illumination',
       },
       {
-        src: 'https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=800&q=80',
+        src: '/images/events/hru-fest-annual-cultural.jpg',
         caption: 'Departmental cultural band and celebration team',
       },
     ],
@@ -107,8 +107,8 @@ Under canopy lights and glowing lanterns, students, faculty, and international f
     tint: '#FFC53D', // Pop Gold
     gradient: 'from-[#FFC53D] via-[#FF9E4A] to-[#FF7A59]',
     countdownLabel: 'Approx 7 Weeks Away',
-    image: 'https://images.unsplash.com/photo-1605629921711-2f6b00c6bbf4?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Warm glowing traditional Diwali earthen diyas lined beautifully',
+    image: '/images/events/diwali-deepotsav.jpg',
+    alt: 'Warm glowing traditional earthen diyas and rangoli illuminating Diwali celebration',
     badge: 'Festival of Lights',
     summary: 'The campus glows with thousands of earthen diyas, lantern arrays, inter-departmental rangoli art contests, sweet distributions, and the grand Diwali musical evening.',
     description: `Diwali at HR University is an ethereal experience of warmth and camaraderie. All faculty towers and academic studios participate in the 'Deepotsav Illumination Sprint', lighting up walkways with sustainable earthen diyas and handmade paper lanterns.
@@ -158,11 +158,11 @@ Traditional rangoli competitions bring intricate floor art to every corridor usi
     ],
     momentsGallery: [
       {
-        src: 'https://images.unsplash.com/photo-1605629921711-2f6b00c6bbf4?auto=format&fit=crop&w=800&q=80',
+        src: '/images/events/diwali-deepotsav.jpg',
         caption: 'Clay diya lamps along central reflection pool',
       },
       {
-        src: 'https://images.unsplash.com/photo-1533158307587-828f0a76ef46?auto=format&fit=crop&w=800&q=80',
+        src: '/images/events/onam-pongal-harvest.jpg',
         caption: 'Marigold and rose petal rangoli creation',
       },
     ],
@@ -180,8 +180,8 @@ Traditional rangoli competitions bring intricate floor art to every corridor usi
     tint: '#F472B6', // Pop Pink
     gradient: 'from-[#F472B6] via-[#FF7A59] to-[#C6FF3D]',
     countdownLabel: 'Spring Celebration',
-    image: 'https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Students celebrating Holi with joyful clouds of eco-friendly herbal pink and gold colors',
+    image: '/images/events/holi-spring-colors.jpg',
+    alt: 'Joyful students celebrating Holi festival with clouds of organic gulal colors',
     badge: 'Spring Carnival',
     summary: 'A vibrant celebration of spring unity with certified organic herbal gulal, dhol beats, cold thandai stalls, and best-dressed ethnic celebrations.',
     description: `Holi at HR University is celebrated with exuberant youthfulness and unwavering environmental responsibility. Using exclusively certified organic botanical gulal derived from turmeric, beetroot, and marigold petals, the campus grounds turn into an explosion of vivid joy.
@@ -230,7 +230,7 @@ The morning starts with traditional festive greetings and sweets distribution, p
     ],
     momentsGallery: [
       {
-        src: 'https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&w=800&q=80',
+        src: '/images/events/holi-spring-colors.jpg',
         caption: 'Herbal gulal clouds under spring sunshine',
       },
     ],
@@ -248,8 +248,8 @@ The morning starts with traditional festive greetings and sweets distribution, p
     tint: '#22D3EE', // Pop Sky
     gradient: 'from-[#22D3EE] via-[#FFC53D] to-[#FF7A59]',
     countdownLabel: 'Winter Carnival',
-    image: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Colorful kites soaring in clear blue winter skies during Uttarayan',
+    image: '/images/events/makar-sankranti-uttarayan.jpg',
+    alt: 'Hundreds of colourful kites soaring across the sky during Gujarat Uttarayan festival',
     badge: 'Sky Festival',
     summary: 'Gujarat’s beloved Uttarayan celebrated across all campus rooftops with friendly kite-cutting battles, kite design contests, and warm traditional til-gud and undhiyu lunch.',
     description: `Uttarayan at HR University celebrates the northern movement of the sun with exhilarating terrace camaraderie. From sunrise to sunset, the sky above the campus is filled with hundreds of colorful kites soaring in harmony.
@@ -291,7 +291,7 @@ The atmosphere resonates with joyous shouts of "Kai Po Che!" as students, profes
     ],
     momentsGallery: [
       {
-        src: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80',
+        src: '/images/events/makar-sankranti-uttarayan.jpg',
         caption: 'Kites dancing over the morning sky',
       },
     ],
@@ -309,8 +309,8 @@ The atmosphere resonates with joyous shouts of "Kai Po Che!" as students, profes
     tint: '#FF7A59',
     gradient: 'from-[#FF7A59] via-[#FFC53D] to-[#2DD4BF]',
     countdownLabel: 'Autumn Cultural Days',
-    image: 'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Festive cultural lamps and ceremonial celebration for Durga Puja',
+    image: '/images/events/durga-puja-utsav.jpg',
+    alt: 'Artistic Durga Puja pandal and traditional deity idols with ceremonial illuminations',
     badge: 'Heritage Fest',
     summary: 'A magnificent celebration of craftsmanship and classical arts, featuring sustainable pandal installations designed by architecture students, Dhunuchi dance, and cultural recitals.',
     description: `HRU celebrates Durga Puja with exquisite artistic ingenuity and cultural devotion. Architecture and Design students collaborate to construct sustainable thematic pandals made of recycled bamboo, terracotta, and jute textiles.
@@ -347,7 +347,7 @@ Evenings feature the hypnotic beats of the Dhak drums, traditional Dhunuchi Naac
     ],
     momentsGallery: [
       {
-        src: 'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=800&q=80',
+        src: '/images/events/durga-puja-utsav.jpg',
         caption: 'Evening festive lamps and cultural performances',
       },
     ],
@@ -365,8 +365,8 @@ Evenings feature the hypnotic beats of the Dhak drums, traditional Dhunuchi Naac
     tint: '#FFC53D',
     gradient: 'from-[#FFC53D] via-[#FF7A59] to-[#2DD4BF]',
     countdownLabel: 'Monsoon Festive',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Eco-friendly traditional clay art, floral decoration and festive lamps',
+    image: '/images/events/ganesh-chaturthi-utsav.jpg',
+    alt: 'Eco-friendly clay Lord Ganesha idol decorated with floral garlands and festive lamps',
     badge: 'Eco Craft Fest',
     summary: 'A celebration of wisdom, new beginnings, and environmental stewardship with handmade clay idol contests, high-octane Nashik Dhol performances, and Modak baking workshops.',
     description: `Ganesh Chaturthi at HR University embodies the perfect marriage of devotion and ecological consciousness. Students craft their own mini Ganpati idols in clay modeling workshops using seeds and river mud that blossom into flowering plants upon visarjan.
@@ -402,7 +402,7 @@ The campus rings with thunderous Dhol-Tasha beats by the student percussion trou
     ],
     momentsGallery: [
       {
-        src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
+        src: '/images/events/ganesh-chaturthi-utsav.jpg',
         caption: 'Terracotta craft and floral celebration',
       },
     ],
@@ -420,8 +420,8 @@ The campus rings with thunderous Dhol-Tasha beats by the student percussion trou
     tint: '#2DD4BF', // Pop Mint
     gradient: 'from-[#2DD4BF] via-[#C6FF3D] to-[#FFC53D]',
     countdownLabel: 'Harvest Fest',
-    image: 'https://images.unsplash.com/photo-1533158307587-828f0a76ef46?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Magnificent Pookalam floral carpet created with multi-colored petals',
+    image: '/images/events/onam-pongal-harvest.jpg',
+    alt: 'Vibrant traditional Onam Pookalam floral carpet crafted from fresh flower petals',
     badge: 'Harvest Jubilee',
     summary: 'Honoring harvest traditions with 20-foot multi-tiered Pookalam and Kolam competitions, Chenda Melam percussion, high-stakes tug-of-war, and authentic 24-dish Sadhya feast served on banana leaves.',
     description: `HRU brings South Indian harvest festivals alive with grandeur. The main atrium is draped in fresh marigold garlands and jasmine, anchored by an enormous 20-foot Pookalam flower carpet designed by fine arts students.
@@ -458,7 +458,7 @@ Students dress in traditional Kasavu sarees and Mundus, enjoying the rhythmic ca
     ],
     momentsGallery: [
       {
-        src: 'https://images.unsplash.com/photo-1533158307587-828f0a76ef46?auto=format&fit=crop&w=800&q=80',
+        src: '/images/events/onam-pongal-harvest.jpg',
         caption: 'Pookalam flower carpet celebration',
       },
     ],
@@ -476,8 +476,8 @@ Students dress in traditional Kasavu sarees and Mundus, enjoying the rhythmic ca
     tint: '#5B5BF0', // HRU Indigo
     gradient: 'from-[#5B5BF0] via-[#22D3EE] to-[#C6FF3D]',
     countdownLabel: '48h Buildathon',
-    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Hackathon engineers collaborating intensely with code and hardware rigs',
+    image: '/images/events/hackhru-global-hackathon.jpg',
+    alt: 'Student software developers coding intensely in a collaborative hackathon sprint',
     badge: '₹15 Lakhs Prize Pool',
     summary: 'Over 800 coders, robotics hackers, and UI designers building around the clock with unmetered GPU compute and direct angel investor demo tracks.',
     description: `HackHRU is one of India's most intense college hackathons. For 48 continuous hours, the Glass Atrium transforms into a bustling cyber city filled with pizza boxes, hardware soldering kits, and multi-agent AI terminals.
@@ -514,7 +514,7 @@ Teams pitch live to leading startup founders, CTOs, and angel syndicates on Sund
     ],
     momentsGallery: [
       {
-        src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80',
+        src: '/images/events/hackhru-global-hackathon.jpg',
         caption: 'Late night coding sprint at HackHRU',
       },
     ],
@@ -532,8 +532,8 @@ Teams pitch live to leading startup founders, CTOs, and angel syndicates on Sund
     tint: '#A78BFA', // Pop Violet
     gradient: 'from-[#A78BFA] via-[#F472B6] to-[#FF7A59]',
     countdownLabel: 'Grand Finale',
-    image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Enthusiastic crowd at college festival concert with colorful stage lights',
+    image: '/images/events/hru-fest-annual-cultural.jpg',
+    alt: 'Star night music concert with live stage lights and cheering student crowd',
     badge: 'Flagship Fest',
     summary: 'The biggest youth celebration in western India featuring live Bollywood & Indie artist concerts, street dance battles, mono-acts, and culinary pop-up streets.',
     description: `HRU Fest brings together over 12,000 university students for four uninhibited days of artistic celebration. From dawn to dusk, concurrent stages host classical raga battles, contemporary street dancing, spoken word poetry, and theatrical street plays (Nukkad Natak).
@@ -578,7 +578,7 @@ Evenings culminate in stadium-scale concerts featuring nationally acclaimed sing
     ],
     momentsGallery: [
       {
-        src: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80',
+        src: '/images/events/hru-fest-annual-cultural.jpg',
         caption: 'Star Night concert crowd under laser lights',
       },
     ],
@@ -596,8 +596,8 @@ Evenings culminate in stadium-scale concerts featuring nationally acclaimed sing
     tint: '#FFC53D',
     gradient: 'from-[#FF7A59] via-white to-[#2DD4BF]',
     countdownLabel: 'National Pride',
-    image: 'https://images.unsplash.com/photo-1532375810709-75b1da00537c?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Indian national tricolor flag and patriotic celebration',
+    image: '/images/events/republic-independence-symphony.jpg',
+    alt: 'The Indian Tricolor national flag fluttering high under clear blue sky',
     badge: 'National Pride',
     summary: 'A dignified ceremony honoring India’s constitutional ethos with campus parades, classical patriotic symphonies, and clean-tech social innovation showcases.',
     description: `HR University commemorates Republic Day and Independence Day with immense patriotic pride and visionary resolve. The celebrations commence with ceremonial Tricolor unfurling and NCC parade, followed by choir renditions of 'Vande Mataram' and 'Jana Gana Mana'.
@@ -634,7 +634,7 @@ Students participate in the 'Youth for Viksit Bharat' technology exhibition, pre
     ],
     momentsGallery: [
       {
-        src: 'https://images.unsplash.com/photo-1532375810709-75b1da00537c?auto=format&fit=crop&w=800&q=80',
+        src: '/images/events/republic-independence-symphony.jpg',
         caption: 'Patriotic assembly and tricolor morning ceremony',
       },
     ],
@@ -652,8 +652,8 @@ Students participate in the 'Youth for Viksit Bharat' technology exhibition, pre
     tint: '#2DD4BF',
     gradient: 'from-[#2DD4BF] via-[#5B5BF0] to-[#FFC53D]',
     countdownLabel: 'Community Harmony',
-    image: 'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Festive community banquet and celebration with traditional hospitality',
+    image: '/images/events/eid-christmas-interfaith.jpg',
+    alt: 'Festive illuminated celebration with vibrant colorful lanterns and community gatherings',
     badge: 'Inclusive Harmony',
     summary: 'Celebrating the pluralistic fabric of India with Eid feasts, intricate Arabic and Rajasthani mehndi competitions, Christmas winter carols, and campus charity drives.',
     description: `HR University takes pride in its vibrant, inclusive student body. Eid Milan features community feasts with hot Sheer Khurma, Biryani stalls, and inter-batch Arabic calligraphy contests.
@@ -690,12 +690,8 @@ In December, the campus is decorated with fairy lights, giant sustainable Christ
     ],
     momentsGallery: [
       {
-        src: 'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80',
+        src: '/images/events/eid-christmas-interfaith.jpg',
         caption: 'Campus festive feast and community banquet',
-      },
-      {
-        src: 'https://images.unsplash.com/photo-1543589077-47d81606c1bf?auto=format&fit=crop&w=800&q=80',
-        caption: 'Winter campus illumination and seasonal carols',
       },
     ],
   },
@@ -712,8 +708,8 @@ In December, the campus is decorated with fairy lights, giant sustainable Christ
     tint: '#FF7A59',
     gradient: 'from-[#FF7A59] via-[#C6FF3D] to-[#22D3EE]',
     countdownLabel: 'Summer Games',
-    image: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Athletes competing on running track in college sports meet',
+    image: '/images/events/annual-sports-meet-olympiad.jpg',
+    alt: 'Athletes sprinting forward on university athletics stadium running track',
     badge: 'Olympiad',
     summary: 'Olympic-spec sports complex hosting 5 days of high-intensity athletics, Kabaddi, Cricket, Badminton, and collegiate Esports gaming battles.',
     description: `The HRU Sports Olympiad brings out raw athletic determination and biometric analytics. From 100m sprint dashes on Olympic tracks to high-stakes Kabaddi and floodlit T20 Cricket matches, every department competes for the prestigious Chancellor's Athletics Trophy.
@@ -758,8 +754,68 @@ Simultaneously, the Neon Kinetic Esports Hub hosts collegiate championships in V
     ],
     momentsGallery: [
       {
-        src: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80',
+        src: '/images/events/annual-sports-meet-olympiad.jpg',
         caption: 'Track athletes crossing the finish line',
+      },
+    ],
+  },
+
+  {
+    id: 'event-academic-colloquium',
+    slug: 'academic-research-colloquium',
+    title: 'HRU Global Academic Colloquium & Research Conclave',
+    tagline: 'Interdisciplinary research paper presentations, keynote symposiums, and innovation grant pitches',
+    monthApprox: 'February',
+    dateStr: 'Feb 18 - 20, 2027',
+    featured: false,
+    category: 'Academic',
+    tint: '#38BDF8', // Cyan/Sky
+    gradient: 'from-[#38BDF8] via-[#5B5BF0] to-[#2DD4BF]',
+    countdownLabel: 'Academic Congress',
+    image: '/images/events/academic-research-colloquium.jpg',
+    alt: 'Academic research symposium keynote presentation in university amphitheater',
+    badge: 'Research Conclave',
+    summary: 'International academic congress gathering scholars, student researchers, and industry pioneers for peer-reviewed paper presentations and doctoral symposiums.',
+    description: `The HRU Global Academic Colloquium & Research Conclave showcases breakthroughs spanning embodied AI, quantum security, bio-materials, and sustainable urban architecture.
+Students and faculty fellows present research papers alongside visiting scientists from MIT, Cambridge, and IITs. Outstanding papers receive seed grants from the HRU Innovation Foundation.`,
+    schedule: [
+      { time: '09:00 AM', title: 'Inaugural Keynote Address & Research Overview', venue: 'Turing Hall' },
+      { time: '11:00 AM', title: 'Parallel Paper Tracks: AI, Biotech & Materials', venue: 'Seminar Bay 1-4' },
+      { time: '02:30 PM', title: 'Doctoral Poster Presentation & Peer Review', venue: 'Innovation Foyer' },
+      { time: '05:00 PM', title: 'Seed Grant Awards & Plenary Closing Ceremony', venue: 'Grand Auditorium' },
+    ],
+    competitions: [
+      {
+        name: 'Best Undergraduate Research Paper',
+        type: 'Academic',
+        teamSize: '1 - 3 members',
+        prizePool: '₹1,00,000',
+        venue: 'Turing Hall',
+        vibe: 'Scholarly Excellence',
+      },
+      {
+        name: 'Speculative Science & Poster Pitch',
+        type: 'Academic',
+        teamSize: 'Solo or Duo',
+        prizePool: '₹50,000',
+        venue: 'Central Atrium',
+        vibe: 'Innovative Ideation',
+      },
+    ],
+    rules: [
+      {
+        title: 'Originality & Academic Integrity',
+        detail: 'Submissions must represent original, unpublished student research with faculty mentorship endorsement.',
+      },
+      {
+        title: 'Peer Review Adherence',
+        detail: 'Double-blind peer review methodology applies to all technical paper evaluation tracks.',
+      },
+    ],
+    momentsGallery: [
+      {
+        src: '/images/events/academic-research-colloquium.jpg',
+        caption: 'Keynote lecture session in university amphitheater',
       },
     ],
   },

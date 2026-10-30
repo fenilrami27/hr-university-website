@@ -210,6 +210,16 @@ export function Navbar({ isDark, toggleTheme, onOpenSearch }) {
               </NavLink>
 
               <NavLink
+                to="/student-updates"
+                className={({ isActive }) => `
+                  px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase transition-colors
+                  ${isActive ? 'text-hru-gold font-bold bg-white/5' : 'text-app-muted hover:text-white'}
+                `}
+              >
+                Student Updates
+              </NavLink>
+
+              <NavLink
                 to="/scholarships"
                 className={({ isActive }) => `
                   px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase transition-colors
@@ -306,6 +316,7 @@ export function Navbar({ isDark, toggleTheme, onOpenSearch }) {
                 { name: 'Home', path: '/' },
                 { name: 'All Departments', path: '/departments' },
                 { name: 'Degree Programs', path: '/programs' },
+                { name: 'Student Updates', path: '/student-updates' },
                 { name: 'Events & Festivals', path: '/events' },
                 { name: 'Campus Life & Living Labs', path: '/campus' },
                 { name: 'Research & Innovation', path: '/research' },

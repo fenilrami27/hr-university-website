@@ -175,12 +175,16 @@ export function EventsPage() {
               className="rounded-3xl overflow-hidden bg-app-surface1 border border-white/10 hover:border-white/30 transition-all duration-500 group flex flex-col justify-between shadow-xl relative"
             >
               {/* Event Image Container with Hover Zoom & Color Wash */}
-              <div className="relative aspect-[16/10] overflow-hidden">
+              <div className="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-[#12142B] via-[#1E2248] to-[#0A0B1E]">
                 <img
                   src={evt.image}
                   alt={evt.alt || evt.title}
                   loading="lazy"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 filter brightness-90 group-hover:brightness-100"
+                  style={{ objectPosition: 'center 35%' }}
                 />
 
                 {/* Color Wash Overlay in Event's Color on Hover */}
@@ -276,12 +280,18 @@ export function EventsPage() {
               className="p-5 sm:p-6 rounded-3xl bg-app-surface1 border border-white/10 hover:border-white/30 transition-all flex flex-col md:flex-row items-start md:items-center justify-between gap-6 group"
             >
               <div className="flex items-start sm:items-center gap-4">
-                <img
-                  src={evt.image}
-                  alt={evt.title}
-                  loading="lazy"
-                  className="w-20 h-20 rounded-2xl object-cover shrink-0 border border-white/10"
-                />
+                <div className="w-20 h-20 rounded-2xl overflow-hidden shrink-0 border border-white/10 bg-gradient-to-br from-[#12142B] via-[#1E2248] to-[#0A0B1E]">
+                  <img
+                    src={evt.image}
+                    alt={evt.alt || evt.title}
+                    loading="lazy"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                    }}
+                    className="w-full h-full object-cover"
+                    style={{ objectPosition: 'center 35%' }}
+                  />
+                </div>
                 <div>
                   <div className="flex items-center gap-2 mb-1">
                     <span

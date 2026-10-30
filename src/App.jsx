@@ -20,6 +20,7 @@ const AdmissionsPage = lazy(() => import('./pages/AdmissionsPage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const PortalPage = lazy(() => import('./pages/PortalPage'));
+const StudentUpdatesPage = lazy(() => import('./pages/StudentUpdatesPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 // Route Suspense Fallback
@@ -75,6 +76,7 @@ export function App() {
               <Route path="about" element={<AboutPage />} />
               <Route path="contact" element={<ContactPage />} />
               <Route path="portal" element={<PortalPage />} />
+              <Route path="student-updates" element={<StudentUpdatesPage />} />
               <Route path="404" element={<NotFoundPage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Route>

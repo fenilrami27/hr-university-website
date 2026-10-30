@@ -133,14 +133,18 @@ export function EventsSection() {
       </div>
 
       {/* Large Featured Card (Navratri & Garba Night) */}
-      <div className="mb-14 rounded-3xl overflow-hidden border border-white/15 bg-[#0A0B1E] shadow-2xl relative">
+      <div className="mb-14 rounded-3xl overflow-hidden border border-white/15 bg-gradient-to-br from-[#12142B] via-[#1E2248] to-[#0A0B1E] shadow-2xl relative">
         <div className="relative min-h-[380px] sm:min-h-[440px] flex flex-col justify-end p-6 sm:p-10 lg:p-14 overflow-hidden">
           {/* Background Photo & Overlay */}
           <img
             src={featuredFestival.image}
             alt={featuredFestival.alt}
             loading="lazy"
+            onError={(e) => {
+              e.currentTarget.style.display = 'none';
+            }}
             className="absolute inset-0 w-full h-full object-cover filter brightness-[0.7] saturate-125 transition-transform duration-1000 hover:scale-105"
+            style={{ objectPosition: 'center 35%' }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0A0B1E] via-[#0A0B1E]/60 to-transparent pointer-events-none" />
           <div className="absolute top-0 right-0 w-[500px] h-[300px] bg-gradient-to-b from-[#FF7A59]/30 to-transparent blur-[120px] pointer-events-none" />
@@ -262,12 +266,16 @@ export function EventsSection() {
               style={{ minHeight: '420px' }}
             >
               {/* Card Photo Background */}
-              <div className="relative aspect-[16/10] overflow-hidden">
+              <div className="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-[#12142B] via-[#1E2248] to-[#0A0B1E]">
                 <img
                   src={fest.image}
                   alt={fest.alt || fest.title}
                   loading="lazy"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 filter brightness-90"
+                  style={{ objectPosition: 'center 35%' }}
                 />
                 <div
                   className="absolute inset-0 opacity-40 mix-blend-multiply pointer-events-none"
